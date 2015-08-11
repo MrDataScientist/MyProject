@@ -1,0 +1,151 @@
+<!-- @autor : Tarik En-nakdi    company : Beamlabs   country : France (Paris)        -->
+<html>
+<head>
+<!--A revoir et A tester-->
+<script type="text/javascript" src="filename.js"></script>
+
+<style>
+#container {
+}
+
+#nav, #nav ul {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+#nav a {
+   display: block;
+   width: 10em;
+}
+
+#nav li {
+   float: left;
+   width: 10em;
+}
+
+#nav li ul {
+   position: absolute;
+   width: 10em;
+   left: -999em;
+}
+
+#nav li:hover ul {
+   left: auto;
+}
+
+#nav li:hover ul, #nav li.sfhover ul {
+   left: auto;
+}
+</style>
+<!--My coding start here---------------------------------------------------------------------->
+<h1><B>Push Media :</B></h1>
+<script language="javascript">
+function changesize(size) { document.getElementById('texte').style.fontSize=size+'px';}
+function changecolor(color) { document.getElementById('texte').style.color=color;}
+function gras(){document.getElementById('texte').style.fontWeight = "bold";}
+function italique(){document.getElementById('texte').style.fontStyle="italic";}
+function underline(){document.getElementById('texte').style.textDecoration="underline"}
+function effacer(){document.getElementById('texte').value="";}
+
+
+<!-- Pour les menu
+sfHover = function() {
+   var sfEls = document.getElementById("nav").getElementsByTagName("li");
+   for (var i=0; i<sfEls.length; i++) {
+      sfEls[i].onmouseover=function() {
+         this.className+=" sfhover";
+      }
+      sfEls[i].onmouseout=function() {
+      this.className=this.className.replace(new RegExp(" sfhover\b"), "");
+      }
+   }
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+//-->
+// this is the code for the image
+var img = new Image();   // Crée un nouvel objet Image
+img.src = 'myImage.png'; // Définit le chemin vers sa source
+img.onload = function(){
+  // instructions appelant drawImage ici
+}
+
+// save function
+
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<table align="center">
+
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">[image/text/size/style/color]/[editer : effacer]<!--Panel Heading-->
+	
+  <ul id="nav">
+      <li><a href="#" BORDER="0">Taille police</a>
+         <ul>
+			<li><a href="javascript:changesize(10);">10</a></li>
+			<li><a href="javascript:changesize(20);">20</a></li>
+			<li><a href="javascript:changesize(30);">24</a></li>
+			<li><a href="javascript:changesize(40);">40</a></li>
+			<li><a href="javascript:changesize(50);">50</a></li>
+			<li><a href="javascript:changesize(60);">60</a></li>
+			<li><a href="javascript:changesize(70);">70</a></li>
+			<li><a href="javascript:changesize(80);">80</a></li>
+			<li><a href="javascript:changesize(90);">90</a></li>
+         </ul>
+      </li>
+	 
+	 
+      <li><a href="#" BORDER="0">text style</a>
+         <ul>
+            <li><a href="javascript:underline();">Underline</a> </li>
+			
+            <li><a href="javascript:italique();"><I>Italique</I></a></li>
+            <li><a href="javascript:gras();"><B>Gras </B></a> </li>
+         </ul></li>
+		 
+	  <li><a href="#" BORDER="0">color</a>
+         <ul>
+
+			
+			<li><a href="javascript:changecolor('#000000');"> <button type="button" style="background-color: #000000;">black</button></a></li>
+			<li><a href="javascript:changecolor('#FF0000');"> <button type="button" style="background-color: #FF0000;">rouge</button> </a> </li>
+			<li><a href="javascript:changecolor('#00FF00');"> <button type="button" style="background-color: #00FF00;">Vert</button> </a> </li>
+			<li><a href="javascript:changecolor('#008000');"> <button type="button" style="background-color: #008000;">Green</button> </a></li>
+			<li><a href="javascript:changecolor('#0000FF');"> <button type="button" style="background-color: #0000FF;">Bleu</button> </a> </li>
+			<li><a href="javascript:changecolor('#FF00FF');"> <button type="button" style="background-color: #FF00FF;">Rose</button> </a> </li>
+			<li><a href="javascript:changecolor('#FFFF00');"> <button type="button" style="background-color: #ffff00;">Jaune</button> </a> </li>
+			<li><a href="javascript:changecolor('#00FFFF');"> <button type="button" style="background-color: #00ffff;">gray</button> </a></li>
+			<li><a href="javascript:changecolor('#C0C0C0');"> <button type="button" style="background-color: #C0C0C0;">Silver</button> </a></li>
+			<li><a href="javascript:changecolor('#800000');"> <button type="button" style="background-color: #800000;">Maroon</button> </a></li>		
+			<li><a href="javascript:changecolor('#800080');"> <button type="button" style="background-color: #800080;">Purple</button> </a></li>			
+			<li><a href="javascript:changecolor('#808000');"> <button type="button" style="background-color: #808000;">Olive</button> </a></li>
+			<li><a href="javascript:changecolor('#000080');"> <button type="button" style="background-color: #000080;">Navy</button> </a></li>
+			<li><a href="javascript:changecolor('#008080');"> <button type="button" style="background-color: #008080;">Teal</button> </a></li>
+	
+      </ul></li>
+		 
+		 
+	  <li><a href="#" BORDER="0">Validation</a>
+         <ul>
+			<li><a href type="submit" value="submit"><br/>valider</a></li>
+			<li><a href type="button" onclick="effacer();"><br/>effacer</a></li> 
+			</ul> </li>
+	
+ </div>   </div>
+
+
+<div class="panel-body" style="background-image:url(test.png);width: 300px;height: 534px;">
+<p id="texte" contenteditable="true" style="padding: 6em 2em 6em 1em;"></p>
+   </div>
+</ul>   
+</table>
+</body>
+</html>
