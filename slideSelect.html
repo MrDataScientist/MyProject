@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>An HTML5 Slideshow w/ Canvas & jQuery | Tutorialzine Demo</title>
+
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+</head>
+
+<body>
+<script>
+function divParaElems() {
+    var div = document.getElementById("slideshow");
+    var divParas = div.getElementsByTagName("img");
+    var num = divParas.length;
+    alert("There are " + num + " paragraph in #div");
+    }
+</script>
+
+<div id="slideshow">
+
+    <ul class="slides">
+        <li><img name="img" src="img/photos/a.jpg" width="539" height="280" alt="Marsa Alam" ></img></li>
+        <li><img name="img" src="img/photos/b.jpg" width="570" height="280" alt="Turrimetta Beach" ></img></li>
+        <li><img name="img" src="img/photos/c.jpg" width="560" height="280" alt="Power Station" ></img></li>
+        <li><img name="img" src="img/photos/d.jpg" width="560" height="280" alt="Colors of Nature" ></img></li>
+    </ul>
+
+    <span class="arrow previous"></span>
+    <span class="arrow next"></span>
+</div>
+
+
+  <button onclick="divParaElems();">
+    show all img elements in div element</button><br />
+	
+
+	
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
