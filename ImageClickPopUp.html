@@ -1,0 +1,26 @@
+ <html>
+<head>
+<title></title>
+
+<script type="text/javascript">
+function ImageMax(chemin)
+   {
+   html = '<html> <head> <title>ImageMax</title> </head> <body onBlur="top.close()"><IMG src="'+chemin+'" BORDER=0 NAME=ImageMax onLoad="window.resizeTo(document.ImageMax.width+10, document.ImageMax.height+30)"></body></html>';
+   popupImage = window.open('','_blank','toolbar=0, location=0, directories=0, menuBar=0, scrollbars=0, resizable=1');
+   popupImage.document.open();
+   popupImage.document.write(html);
+   popupImage.document.close()
+   };
+</script>
+
+</head>
+<body>
+<a href="#" onclick="ImageMax('img/photos/a.jpg');">
+<img src="img/photos/a.jpg"></a>
+<a href="#" onclick="ImageMax('img/photos/b.jpg');">
+<img src="img/photos/b.jpg"></a>
+<a href="#" onclick="ImageMax('img/photos/c.jpg');">
+<img src="img/photos/c.jpg"></a>
+
+</body>
+</html> 
