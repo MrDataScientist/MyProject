@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>An HTML5 Slideshow w/ Canvas & jQuery | Tutorialzine Demo</title>
+
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+</head>
+
+<body>
+<script>
+function divParaElems() {
+    var div = document.getElementById("slideshow");
+    var divParas = div.getElementsByTagName("img");
+    var num = divParas.length;
+    alert("There are " + num + " paragraph in #div");
+    }
+
+//this function allow us to get the name of each selected image	
+function SetImageName(strName)
+{
+  document.getElementById("ImageName").value = strName;
+}
+</script>
+
+Show the name of  the selected image <input type="text" value="" id="ImageName" name="ImageName">
+
+<div id="slideshow">
+
+    <ul class="slides"> <!-- Notice that the onclick image is there : it allows us to show the name of the selected image-->
+        <li><img name="image A" src="img/photos/a.jpg" width="539" height="280" alt="Marsa Alam"  onclick="SetImageName(this.name)"></img></li>
+        <li><img name="image B" src="img/photos/b.jpg" width="570" height="280" alt="Turrimetta Beach"  onclick="SetImageName(this.name)"></img></li>
+        <li><img name="image C" src="img/photos/c.jpg" width="560" height="280" alt="Power Station"  onclick="SetImageName(this.name)"></img></li>
+        <li><img name="image D" src="img/photos/d.jpg" width="560" height="280" alt="Colors of Nature"  onclick="SetImageName(this.name)"></img></li>
+    </ul>
+
+    <span class="arrow previous"></span>
+    <span class="arrow next"></span>
+</div>
+
+  
+  <button onclick="divParaElems();">
+    show all img elements in div element</button><br />
+	
+
+	
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
